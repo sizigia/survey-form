@@ -1,0 +1,110 @@
+:root {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  display: grid;
+  background: linear-gradient(45deg, #284b5f, #fac081, #fc8f68);
+}
+
+#title, #description, #survey-form {
+  background-color: rgba(250, 234, 214, 0.3);
+  box-shadow: 5px 5px 15px 5px #FC8F68;
+  padding: 2%;
+}
+
+#head {
+  margin-bottom: 2%;
+}
+
+#title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#description {
+  text-align: justify;
+}
+
+.inputs {
+  display: flex;
+  flex-flow: column;
+}
+
+#survey-form {  
+  padding: 0% 3% 0% 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#survey-form * {
+  margin-top: 2%;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+select {
+  text-align: center;
+}
+
+#submit {
+  border: 5px outset rgba(39, 74, 93, 0.58);
+  border-radius: 10px;
+  height: 60px;
+  width: 60%;
+  align-self: center;
+  font-weight: bold;
+  margin: 5%;
+}
+
+#submit:hover {
+  background-color: rgba(250, 234, 214, 0.3);
+}
+
+textarea, fieldset, .inputs input {
+  border: 1.5px outset rgba(39, 74, 93, 0.58);
+  border-radius: 10px;
+}
+
+.inputs input {
+  height: 40px;
+}
+
+@media (min-width: 700px){
+ body {
+   grid-template-columns: 1fr 70% 1fr;
+  }
+ 
+ body * {
+  grid-column: 2/3;
+  }
+  
+ .inputs {
+    display: grid;
+    grid-template-columns: 20% 80%;
+  }
+  
+ .inputs label {
+    grid-column: 1/2;
+    text-align: justify;
+    align-self: center;
+    justify-self: end;
+    margin-right: 6%;
+  }
+  
+ .inputs input{
+    grid-column: 2/3;
+  }
+}
